@@ -12,7 +12,9 @@ class AuthViewBody extends StatelessWidget {
         SliverFillRemaining(
           hasScrollBody: false,
           child: Column(
-            children: [AuthHeaderWidget()],
+            children: [
+              AuthHeaderWidget(),
+            ],
           ),
         ),
       ],

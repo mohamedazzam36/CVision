@@ -1,3 +1,4 @@
+import 'package:cvision/core/extensions/app_helper_extensions.dart';
 import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -9,14 +10,14 @@ class AuthHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.45,
+      height: context.height * 0.45,
       width: double.infinity,
       child: Stack(
         children: [
           Positioned(
-            right: -MediaQuery.sizeOf(context).width * 0.3,
+            right: -context.width * 0.3,
             bottom: 0,
-            left: -MediaQuery.sizeOf(context).width * 0.3,
+            left: -context.width * 0.3,
             child: AspectRatio(
               aspectRatio: 1,
               child: Container(
