@@ -14,7 +14,6 @@ class AuthBodyWidget extends StatelessWidget {
       children: [
         CustomAuthButton(
           text: 'Login',
-          backgroundColor: AppColors.primaryColor,
           onPressed: () => context.navigate(const LoginView()),
         ),
         const SizedBox(height: 16),
