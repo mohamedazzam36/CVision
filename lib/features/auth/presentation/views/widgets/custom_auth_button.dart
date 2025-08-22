@@ -1,5 +1,6 @@
 import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_styles.dart';
+import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomAuthButton extends StatelessWidget {
@@ -29,7 +30,7 @@ class CustomAuthButton extends StatelessWidget {
           ),
           backgroundColor: backgroundColor,
         ),
-        child: Text(
+        child: CustomText(
           text,
           style: Styles.styleLight16(
             context,
