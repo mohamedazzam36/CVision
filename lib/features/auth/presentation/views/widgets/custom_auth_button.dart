@@ -33,7 +33,7 @@ class CustomAuthButton extends StatelessWidget {
           text,
           style: Styles.styleLight16(
             context,
-          ).copyWith(color: textColor ?? const Color(0xffFFFFFF), fontSize: 16),
+          ).copyWith(color: textColor ?? AppColors.secondaryColor, fontSize: 16),
         ),
       ),
     );

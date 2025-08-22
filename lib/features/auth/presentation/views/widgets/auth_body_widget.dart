@@ -18,7 +18,7 @@ class AuthBodyWidget extends StatelessWidget {
         CustomAuthButton(
           text: 'Create Account',
           textColor: AppColors.primaryColor,
-          backgroundColor: const Color(0xffFFFFFF),
+          backgroundColor: AppColors.secondaryColor,
           onPressed: () {},
         ),
       ],
