@@ -197,5 +197,17 @@ class Assets {
   /// Assets for imagesWhiteSplashBackground
   /// assets/images/white_splash_background.png
   static const String imagesWhiteSplashBackground = "assets/images/white_splash_background.png";
+
+  /// Assets for imagesFirstOnBoardingScreen
+  /// assets/images/onboarding1.svg
+  static const String imagesFirstOnBoardingScreen = 'assets/images/onboarding1.svg';
+
+  /// Assets for imagesSecondOnBoardingScreen
+  /// assets/images/onboarding2.svg
+  static const String imagesSecondOnBoardingScreen = 'assets/images/onboarding2.svg';
+
+  /// Assets for imagesThirdOnBoardingScreen
+  /// assets/images/onboarding3.svg
+  static const String imagesThirdOnBoardingScreen = 'assets/images/onboarding3.svg';
 }
 
