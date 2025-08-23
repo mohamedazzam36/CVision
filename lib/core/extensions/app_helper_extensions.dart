@@ -17,4 +17,13 @@ extension ContextHelper on BuildContext {
       ),
     );
   }
+
+  void navigateReplace(Widget screen) {
+    Navigator.pushReplacement(
+      this,
+      MaterialPageRoute(
+        builder: (context) => screen,
+      ),
+    );
+  }
 }
