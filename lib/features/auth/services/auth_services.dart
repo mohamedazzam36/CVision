@@ -43,6 +43,15 @@ abstract class AuthServices {
     }
   }
 
+  static Future<Either<String, dynamic>> updatePassword(String email) async {
+    try {
+      await firebaseAuthService.updatePassword(email: email);
+      return right('');
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
   static Future<void> setRememberMe(bool isRemembered) async {
     await prefs.setBool(kHideAuthView, isRemembered);
   }

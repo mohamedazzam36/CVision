@@ -1,3 +1,4 @@
+import 'package:cvision/core/extensions/app_helper_extensions.dart';
 import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/auth_body_background_container.dart';
 import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/auth_successful_body_header.dart';
@@ -32,7 +33,9 @@ class AuthSuccessfulBody extends StatelessWidget {
           ),
           CustomAuthButton(
             text: 'Continue',
-            onPressed: () {},
+            onPressed: () {
+              context.popTimes(2);
+            },
           ),
         ],
       ),

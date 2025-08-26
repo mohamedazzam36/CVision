@@ -26,4 +26,9 @@ extension ContextHelper on BuildContext {
       ),
     );
   }
+
+  void popTimes(int count) {
+    int popped = 0;
+    Navigator.popUntil(this, (_) => popped++ >= count);
+  }
 }

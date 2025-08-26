@@ -104,4 +104,13 @@ class AuthCubit extends Cubit<AuthState> {
       (r) => emit(AuthSuccess()),
     );
   }
+
+  Future<void> updatePassword(String email) async {
+    emit(AuthLoading());
+    final updateResult = await AuthServices.updatePassword(email);
+    updateResult.fold(
+      (errMessage) => emit(UpdatePasswordFailure(errMessage)),
+      (r) => emit(UpdatePasswordSuccess()),
+    );
+  }
 }
