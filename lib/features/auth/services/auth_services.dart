@@ -41,4 +41,8 @@ abstract class AuthServices {
       return left(e.toString());
     }
   }
+
+  static Future<void> setRememberMe(bool isRemembered) async {
+    await prefs.setBool('isRemembered', isRemembered);
+  }
 }
