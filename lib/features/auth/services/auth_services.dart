@@ -1,3 +1,4 @@
+import 'package:cvision/constants.dart';
 import 'package:cvision/core/service_locator/service_locator.dart';
 import 'package:dartz/dartz.dart';
 
@@ -43,6 +44,6 @@ abstract class AuthServices {
   }
 
   static Future<void> setRememberMe(bool isRemembered) async {
-    await prefs.setBool('isRemembered', isRemembered);
+    await prefs.setBool(kHideAuthView, isRemembered);
   }
 }

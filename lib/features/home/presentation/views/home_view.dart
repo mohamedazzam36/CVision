@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomeView extends StatefulWidget {
+  const HomeView({super.key});
+
   @override
   _HomeViewState createState() => _HomeViewState();
 }
@@ -15,11 +17,11 @@ class _HomeViewState extends State<HomeView> {
       body: Center(
         child: Text(
           "Page: $_currentIndex",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.deepPurple, Colors.purple],
             begin: Alignment.topLeft,
@@ -32,32 +34,32 @@ class _HomeViewState extends State<HomeView> {
           items: [
             /// Home
             SalomonBottomBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home"),
+              icon: const Icon(Icons.home),
+              title: const Text("Home"),
               selectedColor: Colors.white,
               unselectedColor: Colors.white70,
             ),
 
             /// Skills
             SalomonBottomBarItem(
-              icon: Icon(Icons.bar_chart),
-              title: Text("Skills"),
+              icon: const Icon(Icons.bar_chart),
+              title: const Text("Skills"),
               selectedColor: Colors.white,
               unselectedColor: Colors.white70,
             ),
 
             /// Library
             SalomonBottomBarItem(
-              icon: Icon(Icons.menu_book),
-              title: Text("Library"),
+              icon: const Icon(Icons.menu_book),
+              title: const Text("Library"),
               selectedColor: Colors.white,
               unselectedColor: Colors.white70,
             ),
 
             /// Profile
             SalomonBottomBarItem(
-              icon: Icon(Icons.person),
-              title: Text("Profile"),
+              icon: const Icon(Icons.person),
+              title: const Text("Profile"),
               selectedColor: Colors.white,
               unselectedColor: Colors.white70,
             ),
