@@ -75,4 +75,33 @@ class AuthCubit extends Cubit<AuthState> {
       (r) => emit(UpdatePasswordSuccess()),
     );
   }
+
+  Future<void> emailAndPaawordSignIn({
+    required String email,
+    required String password,
+  }) async {
+    emit(AuthLoading());
+    final signIn = await AuthServices.emailAndPaawordSignIn(email: email, password: password);
+    signIn.fold(
+      (errMessage) => emit(AuthFailure(errMessage)),
+      (r) => emit(AuthSuccess()),
+    );
+  }
+
+  Future<void> emailAndPaawordRegister({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    emit(AuthLoading());
+    final register = await AuthServices.emailAndPaawordRegister(
+      name: name,
+      email: email,
+      password: password,
+    );
+    register.fold(
+      (errMessage) => emit(AuthFailure(errMessage)),
+      (r) => emit(AuthSuccess()),
+    );
+  }
 }

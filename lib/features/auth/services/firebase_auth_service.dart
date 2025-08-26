@@ -19,6 +19,22 @@ class FirebaseAuthService {
     }
   }
 
+  emailAndPaawordSignIn({
+    required String email,
+    required String password,
+  }) async {
+    await _auth.signInWithEmailAndPassword(email: email, password: password);
+  }
+
+  emailAndPaawordRegister({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    await _auth.createUserWithEmailAndPassword(email: email, password: password);
+    await currentUser!.updateDisplayName(name);
+  }
+
   Future<void> signOut() async {
     await _auth.signOut();
   }

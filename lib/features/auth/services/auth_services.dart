@@ -12,4 +12,33 @@ abstract class AuthServices {
       return left(e.toString());
     }
   }
+
+  static Future<Either<String, dynamic>> emailAndPaawordSignIn({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      await firebaseAuthService.emailAndPaawordSignIn(email: email, password: password);
+      return right('');
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  static Future<Either<String, dynamic>> emailAndPaawordRegister({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    try {
+      await firebaseAuthService.emailAndPaawordRegister(
+        name: name,
+        email: email,
+        password: password,
+      );
+      return right('');
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
 }

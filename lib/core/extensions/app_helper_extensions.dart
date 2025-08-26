@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../features/onboarding/presentation/manager/on_boarding_cubit/on_boarding_cubit.dart';
 
 extension ContextHelper on BuildContext {
   double get width {
@@ -29,6 +26,4 @@ extension ContextHelper on BuildContext {
       ),
     );
   }
-
-  OnBoardingCubit get onBoardingCubit => BlocProvider.of<OnBoardingCubit>(this);
 }
