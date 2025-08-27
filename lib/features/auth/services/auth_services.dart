@@ -1,4 +1,4 @@
-import 'package:cvision/constants.dart';
+import 'package:cvision/core/constants/helper_constants.dart';
 import 'package:cvision/core/service_locator/service_locator.dart';
 import 'package:dartz/dartz.dart';
 
