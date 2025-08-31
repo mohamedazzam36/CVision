@@ -1,6 +1,7 @@
 import 'package:cvision/core/service_locator/service_locator.dart';
 import 'package:cvision/core/utils/app_router.dart';
 import 'package:cvision/core/utils/simple_bloc_observer.dart';
+import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
 import 'package:cvision/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
