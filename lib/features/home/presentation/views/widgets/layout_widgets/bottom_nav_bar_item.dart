@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/app_styles.dart';
 
 SalomonBottomBarItem bottomNavBarItem({
   required IconData iconPressed,
@@ -30,8 +29,7 @@ SalomonBottomBarItem bottomNavBarItem({
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Icon(iconPressed,
-            color: Colors.white, size: 28),
+        child: Icon(iconPressed, color: Colors.white, size: 28),
       ),
     ),
   ),
