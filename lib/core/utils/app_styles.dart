@@ -39,6 +39,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle styleBold12(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 12),
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Merriweather',
+    );
+  }
+
   static TextStyle styleRegular28(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 28),
