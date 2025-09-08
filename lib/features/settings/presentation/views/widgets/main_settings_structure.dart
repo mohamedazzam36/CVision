@@ -1,4 +1,4 @@
-import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/custom_auth_background_container.dart';
+import 'package:cvision/core/widgets/custom_app_background_container.dart';
 import 'package:cvision/features/settings/presentation/views/widgets/custom_settings_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -10,7 +10,7 @@ class MainSettingsStructure extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomAuthBackgroundContainer(
+    return CustomAppBackgroundContainer(
       child: CustomScrollView(
         physics: const ClampingScrollPhysics(),
         slivers: [
