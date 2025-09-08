@@ -45,7 +45,7 @@ class NotUploadedCvView extends StatelessWidget {
             ),
             UploadBox(
               onTap: () {
-                context.homeCubit.pickFile();
+                context.homeCubit.pickAndUploadFile();
               },
               fileIcon: Column(
                 children: [
