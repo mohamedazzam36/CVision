@@ -1,18 +1,24 @@
 class UploadCvModel
 {
-  bool success;
-  DataModel? data;
+  final String status;
+  final DataModel? data;
+  final String timestamp;
+  final String path;
 
   UploadCvModel(
-      this.success,
-      this.data
+      this.status,
+      this.data,
+      this.timestamp,
+      this.path,
       );
 
   factory UploadCvModel.fromJson(Map<String, dynamic> json)
   {
     return UploadCvModel(
-      json['success'],
+      json['status'],
       json['data'] != null ? DataModel.fromJson(json['data'] as Map<String, dynamic>) : null,
+      json['timestamp'],
+      json['path'],
     );
   }
 }
@@ -20,27 +26,47 @@ class UploadCvModel
 
 class DataModel
 {
-  final String id;
-  final String fileName;
-  final String originalName;
-  final String filePath;
-  final String uploadedAt;
+  final String status;
+  final String message;
+  final DetailedDataModel? data;
+
 
   DataModel(
-      this.id,
-      this.fileName,
-      this.originalName,
-      this.filePath,
-      this.uploadedAt,
+      this.status,
+      this.message,
+      this.data
       );
 
   factory DataModel.fromJson(Map<String, dynamic> json) {
     return DataModel(
-      json['id'],
-      json['fileName'],
-      json['originalName'],
-      json['filePath'],
-      json['uploadedAt'],
+      json['status'],
+      json['message'],
+      json['data'] != null ? DetailedDataModel.fromJson(json) : null,
+    );
+  }
+}
+
+class DetailedDataModel
+{
+  final String analysisId;
+  final String cvId;
+  final String status;
+  final String message;
+
+  DetailedDataModel(
+      this.analysisId,
+      this.cvId,
+      this.status,
+      this.message
+      );
+
+  factory DetailedDataModel.fromJson(Map<String, dynamic> json)
+  {
+    return DetailedDataModel(
+      json['analysisId'],
+      json['cvId'],
+      json['status'],
+      json['message'],
     );
   }
 }
