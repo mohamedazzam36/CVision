@@ -1,5 +1,7 @@
 import 'package:cvision/features/auth/presentation/views/auth_view.dart';
 import 'package:cvision/features/home/presentation/views/layout_view.dart';
+import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/detected_skills_view.dart';
+import 'package:cvision/features/home/presentation/views/widgets/profile_view_widgets/profile_edit_view_body.dart';
 import 'package:cvision/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:cvision/features/settings/presentation/views/settings_view.dart';
 import 'package:cvision/features/splash/presentation/views/splash_view.dart';
