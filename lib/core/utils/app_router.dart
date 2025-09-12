@@ -19,7 +19,7 @@ abstract class AppRouter {
       GoRoute(
         name: kSplashView,
         path: kSplashView,
-        builder: (context, state) => const AuthView(),
+        builder: (context, state) => const LayoutView(),
       ),
       GoRoute(
         name: kAuthView,
