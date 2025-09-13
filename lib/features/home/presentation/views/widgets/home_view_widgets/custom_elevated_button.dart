@@ -7,7 +7,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.height,
     this.fontSize,
     this.buttonName,
-    this.buttonColor,
+    required this.buttonColor,
     this.textColor,
     required this.onPressed,
   });
@@ -15,7 +15,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double? height;
   final double? fontSize;
   final String? buttonName;
-  final Color? buttonColor;
+  final Color buttonColor;
   final Color? textColor;
   final VoidCallback onPressed;
   @override
@@ -24,7 +24,7 @@ class CustomElevatedButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: buttonColor!,
+          backgroundColor: buttonColor,
         ),
         onPressed: onPressed,
         child: Text(
