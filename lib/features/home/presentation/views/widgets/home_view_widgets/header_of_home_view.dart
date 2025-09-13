@@ -19,22 +19,23 @@ class HeaderOfHomeView extends StatelessWidget {
                 "Hello, Name ! ",
                 style: Styles.styleBold20(context).copyWith(
                   fontSize: 20,
-                ),),
+                ),
+              ),
               Text(
                 "your job journey starts from here.",
-                style: Styles.styleLight12(context).copyWith(
-                    fontSize: 12,
-                    color: AppColors.secondaryColor
-                ),
+                style: Styles.styleLight12(
+                  context,
+                ).copyWith(fontSize: 12, color: AppColors.secondaryColor),
               ),
             ],
           ),
           const Spacer(),
           IconButton(
-            onPressed: (){},
+            onPressed: () {},
             icon: const Icon(
               Icons.notification_add_outlined,
-              color: AppColors.secondaryColor,),
+              color: AppColors.secondaryColor,
+            ),
           ),
         ],
       ),

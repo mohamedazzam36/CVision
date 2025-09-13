@@ -13,8 +13,7 @@ class ArrowBackAppbar extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: ()
-          {
+          onPressed: () {
             Navigator.pop(context);
           },
           icon: const Icon(
@@ -26,7 +25,7 @@ class ArrowBackAppbar extends StatelessWidget {
           flex: 1,
         ),
         Text(
-          title?? "",
+          title ?? "",
           style: Styles.styleBold20(context),
         ),
         const Spacer(
