@@ -1,3 +1,4 @@
+import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -36,9 +37,9 @@ SalomonBottomBarItem bottomNavBarItem({
   icon: CircleAvatar(
     radius: 23,
     backgroundColor: Colors.white.withValues(alpha: .1),
-    child: Icon(icon, color: AppColors.secondaryColor),
+    child: FittedBox(child: Icon(icon, color: AppColors.secondaryColor)),
   ),
-  title: Text(
+  title: CustomText(
     label,
     style: const TextStyle(
       fontSize: 16,
