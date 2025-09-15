@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "868126027130",
+    "project_id": "cvision-7f747",
+    "storage_bucket": "cvision-7f747.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868126027130:android:4c27588c65101ccbabfac3",
+        "android_client_info": {
+          "package_name": "com.example.cvision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868126027130-dei432vq3mj0sepufab2r98mmfgkc1pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cvision",
+            "certificate_hash": "38a8f95bcda9ab18b03def4ff50e7d9c082030c5"
+          }
+        },
+        {
+          "client_id": "868126027130-a4qvknb22q0sf4ig4906eo6m2nel7omf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0QAi5Gzvq_UExdxf-Lqrqytjw2378nI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868126027130-a4qvknb22q0sf4ig4906eo6m2nel7omf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "868126027130-ngkjm8mtnb3rbaoidbgviiaptf2k3d0o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cvision"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

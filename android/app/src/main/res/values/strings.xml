@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">CVision</string>
+  <string name="facebook_app_id">2303890890064143</string>
+  <string name="fb_login_protocol_scheme">fb2303890890064143</string>
+  <string name="facebook_client_token">6b3320f02f6bfad6d73b40e8915edfe6</string>
+
+
+</resources>

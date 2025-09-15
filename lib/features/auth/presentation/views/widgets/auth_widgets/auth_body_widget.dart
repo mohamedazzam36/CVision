@@ -1,0 +1,41 @@
+import 'package:cvision/core/extensions/access_cubits_extensions.dart';
+import 'package:cvision/core/extensions/helper_extensions.dart';
+import 'package:cvision/core/utils/app_colors.dart';
+import 'package:cvision/features/auth/presentation/views/login_view.dart';
+import 'package:cvision/features/auth/presentation/views/register_view.dart';
+import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/custom_auth_button.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class AuthBodyWidget extends StatelessWidget {
+  const AuthBodyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CustomAuthButton(
+          text: 'Login',
+          onPressed: () => context.navigate(
+            BlocProvider.value(
+              value: context.authCubit,
+              child: const LoginView(),
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        CustomAuthButton(
+          text: 'Create Account',
+          textColor: AppColors.lightThemePrimaryColor,
+          backgroundColor: AppColors.secondaryColor,
+          onPressed: () => context.navigate(
+            BlocProvider.value(
+              value: context.authCubit,
+              child: const RegisterView(),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
