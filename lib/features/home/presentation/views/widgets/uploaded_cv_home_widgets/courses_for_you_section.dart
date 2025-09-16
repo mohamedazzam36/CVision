@@ -19,7 +19,6 @@ class CoursesForYouSection extends StatelessWidget {
           title: 'Courses for You',
         ),
         MainCvDetailsCard(
-          opasity: 245,
           child: Column(
             spacing: 8,
             children: [
@@ -34,9 +33,15 @@ class CoursesForYouSection extends StatelessWidget {
                   ),
                   CustomText(
                     'Udemy',
-                    style: Styles.styleBold12(
-                      context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    style:
+                        Styles.styleBold12(
+                          context,
+                        ).copyWith(
+                          fontSize: 12,
+                          color: const Color(0xff6F6D6D),
+                          decoration: TextDecoration.underline,
+                          decorationThickness: 2,
+                        ),
                   ),
                 ],
               ),
@@ -51,9 +56,15 @@ class CoursesForYouSection extends StatelessWidget {
                   ),
                   CustomText(
                     'Coursera',
-                    style: Styles.styleBold12(
-                      context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    style:
+                        Styles.styleBold12(
+                          context,
+                        ).copyWith(
+                          fontSize: 12,
+                          color: const Color(0xff6F6D6D),
+                          decoration: TextDecoration.underline,
+                          decorationThickness: 2,
+                        ),
                   ),
                 ],
               ),
@@ -68,9 +79,15 @@ class CoursesForYouSection extends StatelessWidget {
                   ),
                   CustomText(
                     'YouTube',
-                    style: Styles.styleBold12(
-                      context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    style:
+                        Styles.styleBold12(
+                          context,
+                        ).copyWith(
+                          fontSize: 12,
+                          color: const Color(0xff6F6D6D),
+                          decoration: TextDecoration.underline,
+                          decorationThickness: 2,
+                        ),
                   ),
                 ],
               ),

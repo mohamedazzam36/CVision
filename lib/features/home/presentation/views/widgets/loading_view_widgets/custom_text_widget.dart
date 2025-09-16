@@ -12,10 +12,7 @@ class CustomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomText(
       text,
-      style: Styles.styleBold20(context).copyWith(
-        fontSize: 20,
-        color: Color(0xff6F6D6D)
-      ),
+      style: Styles.styleBold20(context).copyWith(fontSize: 20, color: const Color(0xff6F6D6D)),
     );
   }
 }

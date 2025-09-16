@@ -8,15 +8,22 @@ import 'package:cvision/features/home/data/models/learning_skills_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LearningSkillsListViewItem extends StatelessWidget {
+class LearningSkillsListViewItem extends StatefulWidget {
   const LearningSkillsListViewItem({super.key, required this.skill});
 
   final LearningSkillsModel skill;
 
   @override
+  State<LearningSkillsListViewItem> createState() => _LearningSkillsListViewItemState();
+}
+
+class _LearningSkillsListViewItemState extends State<LearningSkillsListViewItem> {
+  bool isExpanded = false;
+
+  @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      tilePadding: const EdgeInsets.symmetric(vertical: 7, horizontal: 12),
+      tilePadding: const EdgeInsets.symmetric(horizontal: 12),
       collapsedShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       collapsedBackgroundColor: const Color(0xffEDE7F6),
       backgroundColor: const Color(0xffEDE7F6),
@@ -24,14 +31,15 @@ class LearningSkillsListViewItem extends StatelessWidget {
       minTileHeight: 32,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       showTrailingIcon: false,
+      onExpansionChanged: (value) => setState(() => isExpanded = value),
       title: Row(
         children: [
-          SvgPicture.asset(skill.state.icon),
+          SvgPicture.asset(widget.skill.state.icon),
           const SizedBox(
             width: 4,
           ),
           CustomText(
-            skill.name,
+            widget.skill.name,
             style: Styles.styleRegular12(
               context,
             ).copyWith(fontSize: 12, color: AppColors.blackColor),
@@ -39,19 +47,23 @@ class LearningSkillsListViewItem extends StatelessWidget {
           const SizedBox(
             width: 4,
           ),
-          const Icon(
-            Icons.keyboard_arrow_down,
-            color: AppColors.lightThemePrimaryColor,
+          AnimatedRotation(
+            turns: isExpanded ? -0.5 : 0,
+            duration: const Duration(milliseconds: 150),
+            child: const Icon(
+              Icons.keyboard_arrow_down,
+              color: AppColors.primaryColor,
+            ),
           ),
           const Spacer(),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 12),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(6),
-              color: skill.state.color,
+              color: widget.skill.state.color,
             ),
             child: CustomText(
-              skill.state.name,
+              widget.skill.state.name,
               style: Styles.styleLight12(context).copyWith(fontSize: 12),
             ),
           ),
@@ -76,7 +88,7 @@ class LearningSkillsListViewItem extends StatelessWidget {
                       ],
                     ),
                     CustomText(
-                      skill.time,
+                      widget.skill.time,
                       style: Styles.styleRegular12(context).copyWith(fontSize: 12),
                     ),
                   ],
@@ -93,7 +105,7 @@ class LearningSkillsListViewItem extends StatelessWidget {
                       ],
                     ),
                     CustomText(
-                      skill.difficulty,
+                      widget.skill.difficulty,
                       style: Styles.styleRegular12(context).copyWith(fontSize: 12),
                     ),
                   ],
@@ -111,7 +123,7 @@ class LearningSkillsListViewItem extends StatelessWidget {
                       ],
                     ),
                     CustomText(
-                      skill.priority,
+                      widget.skill.priority,
                       style: Styles.styleRegular12(context).copyWith(fontSize: 12),
                     ),
                   ],
@@ -139,12 +151,12 @@ class LearningSkillsListViewItem extends StatelessWidget {
                       'Learn Resources :',
                       style: Styles.styleBold12(
                         context,
-                      ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                      ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                     ),
                   ],
                 ),
                 CustomText(
-                  skill.resources,
+                  widget.skill.resources,
                   style:
                       Styles.styleRegular12(
                         context,

@@ -25,8 +25,8 @@ class AuthHeaderWidget extends StatelessWidget {
                   gradient: LinearGradient(
                     colors: [
                       AppColors.darkPrimaryColor,
-                      AppColors.lightThemePrimaryColor,
-                      AppColors.lightThemePrimaryColor.withAlpha(190),
+                      AppColors.primaryColor,
+                      AppColors.primaryColor.withAlpha(190),
                     ],
                     begin: Alignment.bottomCenter,
                     end: Alignment.center,

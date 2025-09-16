@@ -19,6 +19,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.textStyle,
     this.fontSize = 12,
     this.prefixIcon,
+    this.borderRadius = 32,
   });
 
   final Color backgroundColor;
@@ -28,7 +29,7 @@ class CustomElevatedButton extends StatelessWidget {
   final bool isDisabled;
   final bool isLoading;
   final void Function() onPressed;
-  final double width, height, elevation, fontSize;
+  final double width, height, elevation, fontSize, borderRadius;
   final TextStyle? textStyle;
   final Widget? prefixIcon;
 
@@ -44,7 +45,7 @@ class CustomElevatedButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             elevation: elevation,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusGeometry.circular(32),
+              borderRadius: BorderRadiusGeometry.circular(borderRadius),
               side: BorderSide(
                 color: isDisabled || isLoading ? borderColor.withAlpha(0) : borderColor,
               ),
@@ -64,6 +65,7 @@ class CustomElevatedButton extends StatelessWidget {
               : Row(
                   spacing: 1,
                   mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     ?prefixIcon,
                     CustomText(

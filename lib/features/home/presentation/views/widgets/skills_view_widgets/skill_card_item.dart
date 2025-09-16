@@ -4,14 +4,21 @@ import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_styles.dart';
 
 class SkillCardItem extends StatelessWidget {
-  const SkillCardItem({super.key, required this.title, required this.level});
+  const SkillCardItem({
+    super.key,
+    required this.title,
+    required this.level,
+    required this.progressValue,
+  });
 
   final String title, level;
+  final double progressValue;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.secondaryColor.withValues(alpha: .7),
+      color: AppColors.secondaryColor,
+      margin: const EdgeInsets.all(0),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 20.0,
@@ -38,11 +45,11 @@ class SkillCardItem extends StatelessWidget {
               ],
             ),
             LinearProgressIndicator(
-              value: .40,
+              value: progressValue,
               minHeight: 8,
               borderRadius: BorderRadius.circular(42),
-              color: const Color(0xff3DDC97),
-              backgroundColor: const Color(0xffD9D9D9),
+              color: progressValue > 0.5 ? const Color(0xff26C6DA) : const Color(0xffE57373),
+              backgroundColor: const Color(0xffEDE7F6),
             ),
           ],
         ),

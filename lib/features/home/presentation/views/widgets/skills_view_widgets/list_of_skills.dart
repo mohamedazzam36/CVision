@@ -3,9 +3,10 @@ import 'package:cvision/features/home/presentation/views/widgets/skills_view_wid
 import 'package:flutter/cupertino.dart';
 
 class ListOfSkills extends StatelessWidget {
-  const ListOfSkills({super.key, required this.dummySkills});
+  const ListOfSkills({super.key, required this.dummySkills, required this.progressValue});
 
   final List<LearningSkillsModel> dummySkills;
+  final double progressValue;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,7 @@ class ListOfSkills extends StatelessWidget {
       itemBuilder: (context, index) => SkillCardItem(
         title: dummySkills[index].name,
         level: dummySkills[index].level,
+        progressValue: progressValue,
       ),
       separatorBuilder: (context, index) => const SizedBox(
         height: 5,

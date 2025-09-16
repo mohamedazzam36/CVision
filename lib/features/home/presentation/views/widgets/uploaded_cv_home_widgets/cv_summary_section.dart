@@ -8,9 +8,9 @@ class CvSummarySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MainCvDetailsCard(
-      opasity: 170,
-      child: Column(
+    return MainCvDetailsCard(
+      backgroundColor: const Color(0xffd49ae4).withAlpha(200),
+      child: const Column(
         children: [
           CvSummaryHeader(),
           SizedBox(

@@ -15,7 +15,11 @@ class CvSummaryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const MainCvDetailsHeader(iconPath: Assets.imagesSummaryIcon, title: 'Your Summary'),
+        const MainCvDetailsHeader(
+          iconPath: Assets.imagesSummaryIcon,
+          title: 'Your Summary',
+          iconColor: AppColors.primaryColor,
+        ),
         const SizedBox(
           height: 8,
         ),
@@ -38,7 +42,7 @@ class CvSummaryHeader extends StatelessWidget {
         const LoadingProgressIndecator(
           value: 0.33,
           height: 8,
-          progressColor: AppColors.lightThemePrimaryColor,
+          progressColor: AppColors.primaryColor,
           backgroundColor: AppColors.secondaryColor,
         ),
       ],

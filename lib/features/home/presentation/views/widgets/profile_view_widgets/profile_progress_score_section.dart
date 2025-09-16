@@ -39,7 +39,7 @@ class ProfileProgressScoreSection extends StatelessWidget {
           LoadingProgressIndecator(
             value: cvLoaded ? 0.33 : 0,
             height: 8,
-            progressColor: AppColors.lightThemePrimaryColor,
+            progressColor: AppColors.primaryColor,
             backgroundColor: AppColors.secondaryColor,
           ),
         ],

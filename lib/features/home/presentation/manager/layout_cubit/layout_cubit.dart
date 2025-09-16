@@ -17,41 +17,27 @@ class LayoutCubit extends Cubit<LayoutStates> {
   bool isCvUploaded = prefs.getBool(kIsCvUploaded) ?? false;
 
   final List<ButtonNavBarModel> navBarItems = const [
-    ButtonNavBarModel(iconPath: Assets.imagesHomeIcon, title: 'Home'),
-    ButtonNavBarModel(iconPath: Assets.imagesSkillsIcon, title: 'Skills'),
-    ButtonNavBarModel(iconPath: Assets.imagesRoadmapIcon, title: 'Roadmap'),
-    ButtonNavBarModel(iconPath: Assets.imagesProfileIcon, title: 'Profile'),
+    ButtonNavBarModel(
+      iconPath: Assets.imagesHomeIcon,
+      title: 'Home',
+      filledIconPath: Assets.imagesFilledHomeIcon,
+    ),
+    ButtonNavBarModel(
+      iconPath: Assets.imagesSkillsIcon,
+      title: 'Skills',
+      filledIconPath: Assets.imagesFilledSkillsIcon,
+    ),
+    ButtonNavBarModel(
+      iconPath: Assets.imagesRoadmapIcon,
+      title: 'Roadmap',
+      filledIconPath: Assets.imagesFilledRoadmapIcon,
+    ),
+    ButtonNavBarModel(
+      iconPath: Assets.imagesProfileIcon,
+      title: 'Profile',
+      filledIconPath: Assets.imagesFilledProfileIcon,
+    ),
   ];
-
-  // List<SalomonBottomBarItem> items = [
-  //   /// Home
-  //   bottomNavBarItem(
-  //     iconPressed: Icons.home_filled,
-  //     icon: Icons.home_outlined,
-  //     label: "Home",
-  //   ),
-
-  //   /// Skills
-  //   bottomNavBarItem(
-  //     iconPressed: Icons.stacked_bar_chart,
-  //     icon: Icons.stacked_bar_chart_rounded,
-  //     label: "Skills",
-  //   ),
-
-  //   /// Library
-  //   bottomNavBarItem(
-  //     iconPressed: Icons.chrome_reader_mode,
-  //     icon: Icons.route,
-  //     label: "Roadmap",
-  //   ),
-
-  //   /// Profile
-  //   bottomNavBarItem(
-  //     iconPressed: Icons.person,
-  //     icon: Icons.person_outline_rounded,
-  //     label: "Profile",
-  //   ),
-  // ];
 
   List<Widget> screens = [
     const HomeView(),

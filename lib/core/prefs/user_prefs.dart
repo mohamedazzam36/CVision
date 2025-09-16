@@ -14,7 +14,7 @@ class UserPrefs {
     return AppUser.fromJson(jsonDecode(prefs.getString(_userKey)!));
   }
 
-  static clearCurrentUser() async {
+  static Future<void> clearCurrentUser() async {
     await prefs.remove(_userKey);
   }
 }

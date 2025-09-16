@@ -19,9 +19,9 @@ class AgreeConditionsSection extends StatelessWidget {
     return Row(
       children: [
         Checkbox(
-          side: const BorderSide(color: AppColors.lightThemePrimaryColor),
+          side: const BorderSide(color: AppColors.primaryColor),
           checkColor: AppColors.secondaryColor,
-          activeColor: AppColors.lightThemePrimaryColor,
+          activeColor: AppColors.primaryColor,
           splashRadius: 0,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           visualDensity: VisualDensity.compact,
@@ -35,7 +35,7 @@ class AgreeConditionsSection extends StatelessWidget {
             'Terms ',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
         CustomText('& ', style: Styles.styleLight12(context).copyWith(fontSize: 12)),
@@ -45,7 +45,7 @@ class AgreeConditionsSection extends StatelessWidget {
             'Conditions ',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
         CustomText('and ', style: Styles.styleLight12(context).copyWith(fontSize: 12)),
@@ -55,7 +55,7 @@ class AgreeConditionsSection extends StatelessWidget {
             'Privacy Policy',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
       ],

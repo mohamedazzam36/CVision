@@ -16,9 +16,9 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-      side: const BorderSide(color: AppColors.lightThemePrimaryColor),
+      side: const BorderSide(color: AppColors.primaryColor),
       checkColor: AppColors.secondaryColor,
-      activeColor: AppColors.lightThemePrimaryColor,
+      activeColor: AppColors.primaryColor,
       splashRadius: 0,
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       visualDensity: VisualDensity.compact,

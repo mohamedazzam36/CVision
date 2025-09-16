@@ -19,7 +19,6 @@ class RecommendedProjectsSection extends StatelessWidget {
           title: 'Recommended Projects',
         ),
         MainCvDetailsCard(
-          opasity: 255,
           child: SizedBox(
             width: double.infinity,
             child: Column(

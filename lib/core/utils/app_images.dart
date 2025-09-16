@@ -34,6 +34,22 @@ class Assets {
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
 
+  /// Assets for imagesFilledHomeIcon
+  /// assets/images/filled_home_icon.svg
+  static const String imagesFilledHomeIcon = "assets/images/filled_home_icon.svg";
+
+  /// Assets for imagesFilledProfileIcon
+  /// assets/images/filled_profile_icon.svg
+  static const String imagesFilledProfileIcon = "assets/images/filled_profile_icon.svg";
+
+  /// Assets for imagesFilledRoadmapIcon
+  /// assets/images/filled_roadmap_icon.svg
+  static const String imagesFilledRoadmapIcon = "assets/images/filled_roadmap_icon.svg";
+
+  /// Assets for imagesFilledSkillsIcon
+  /// assets/images/filled_skills_icon.svg
+  static const String imagesFilledSkillsIcon = "assets/images/filled_skills_icon.svg";
+
   /// Assets for imagesFinishSkillIcon
   /// assets/images/finish_skill_icon.svg
   static const String imagesFinishSkillIcon = "assets/images/finish_skill_icon.svg";

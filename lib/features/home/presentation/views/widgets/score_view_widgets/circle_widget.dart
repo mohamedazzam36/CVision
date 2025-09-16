@@ -37,7 +37,9 @@ class CircularScore extends StatelessWidget {
             ),
             Text(
               "${(percent * 100).toInt()}%",
-              style: Styles.styleRegular28(context).copyWith(fontSize: 32),
+              style: Styles.styleRegular28(
+                context,
+              ).copyWith(fontSize: 32, fontWeight: FontWeight.w600),
             ),
           ],
         ),

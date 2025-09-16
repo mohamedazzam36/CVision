@@ -10,24 +10,29 @@ class CvSammaryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12),
-      decoration: BoxDecoration(
-        color: AppColors.secondaryColor.withAlpha(200),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.secondaryColor),
-      ),
-      child: Column(
-        spacing: 8,
-        children: [
-          CustomText(
-            title,
-            style: Styles.styleBold16(context).copyWith(
-              fontSize: 16,
+    return Card(
+      elevation: 5,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      margin: const EdgeInsets.all(0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        decoration: BoxDecoration(
+          color: AppColors.secondaryColor.withAlpha(200),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.secondaryColor),
+        ),
+        child: Column(
+          spacing: 8,
+          children: [
+            CustomText(
+              title,
+              style: Styles.styleBold16(
+                context,
+              ).copyWith(fontSize: 16, color: AppColors.primaryColor),
             ),
-          ),
-          CustomText(subTitle, style: Styles.styleBold12(context).copyWith(fontSize: 12)),
-        ],
+            CustomText(subTitle, style: Styles.styleBold12(context).copyWith(fontSize: 12)),
+          ],
+        ),
       ),
     );
   }

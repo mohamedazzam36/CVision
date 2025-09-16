@@ -71,7 +71,7 @@ class CustomAuthTextField extends StatelessWidget {
             : null,
         hintStyle: Styles.styleRegular12(context).copyWith(fontSize: 12),
         enabledBorder: _buildBorder(const Color(0xff929090)),
-        focusedBorder: _buildBorder(AppColors.lightThemePrimaryColor),
+        focusedBorder: _buildBorder(AppColors.primaryColor),
         errorBorder: _buildBorder(Colors.red),
         focusedErrorBorder: _buildBorder(Colors.red),
       ),

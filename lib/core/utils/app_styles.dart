@@ -6,7 +6,7 @@ abstract class Styles {
   static TextStyle styleBold20(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 20),
-      color: AppColors.darkPrimaryColor,
+      color: AppColors.blackColor,
       fontWeight: FontWeight.w700,
       fontFamily: 'Merriweather',
     );
@@ -24,7 +24,7 @@ abstract class Styles {
   static TextStyle styleBold16(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 16),
-      color: Color(0xff6F6D6D),
+      color: const Color(0xff6F6D6D),
       fontWeight: FontWeight.w700,
       fontFamily: 'Merriweather',
     );
@@ -60,7 +60,7 @@ abstract class Styles {
   static TextStyle styleRegular16(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 16),
-      color: Color(0xff6F6D6D),
+      color: const Color(0xff6F6D6D),
       fontWeight: FontWeight.w400,
       fontFamily: 'Merriweather',
     );

@@ -10,6 +10,7 @@ class MainAuthViewsStructure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomAppBackgroundContainer(
+      isGradient: true,
       child: CustomScrollView(
         physics: const ClampingScrollPhysics(),
         slivers: [

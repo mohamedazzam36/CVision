@@ -12,7 +12,6 @@ class PersonalizedAdviceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainCvDetailsCard(
-      opasity: 195,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 4,
@@ -25,7 +24,7 @@ class PersonalizedAdviceSection extends StatelessWidget {
                 'Personalized Advice',
                 style: Styles.styleBlack12(
                   context,
-                ).copyWith(fontSize: 16, color: AppColors.lightThemePrimaryColor),
+                ).copyWith(fontSize: 16, color: AppColors.primaryColor),
               ),
             ],
           ),

@@ -16,7 +16,6 @@ class NextStepSection extends StatelessWidget {
       children: [
         const MainCvDetailsHeader(iconPath: Assets.imagesNextStepIcon, title: 'Next Step'),
         MainCvDetailsCard(
-          opasity: 230,
           child: Column(
             spacing: 8,
             children: [
@@ -27,7 +26,7 @@ class NextStepSection extends StatelessWidget {
                     'Skill:',
                     style: Styles.styleBold12(
                       context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                   ),
                   Expanded(
                     child: Text(
@@ -45,7 +44,7 @@ class NextStepSection extends StatelessWidget {
                     'Resource:',
                     style: Styles.styleBold12(
                       context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                   ),
                   Expanded(
                     child: Text(
@@ -63,7 +62,7 @@ class NextStepSection extends StatelessWidget {
                     'Mini Project:',
                     style: Styles.styleBold12(
                       context,
-                    ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                    ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                   ),
                   Expanded(
                     child: Text(

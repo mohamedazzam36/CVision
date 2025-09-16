@@ -5,7 +5,6 @@ import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/core/utils/app_router.dart';
 import 'package:cvision/core/widgets/custom_back_and_title_structure.dart';
 import 'package:cvision/core/widgets/custom_elevated_button.dart';
-import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_states.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/improvment_skills_list_view.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/top_stremgth_skills_list_view.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/detected_skills_header.dart';
@@ -83,9 +82,10 @@ class DetectedSkillsView extends StatelessWidget {
                   context.layoutCubit.currentIndex = 0;
 
                   context.go(AppRouter.kSplashView);
-                  Future.delayed(const Duration(milliseconds: 200), () {
+                  Future.delayed(const Duration(milliseconds: 5), () {
+                    context.layoutCubit.changeBottomNavBar(0);
+
                     context.go(AppRouter.kLayoutView);
-                    context.layoutCubit.emit(ChangeBottomNavBarState());
                   });
                 },
               ),

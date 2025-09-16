@@ -29,18 +29,18 @@ class _GenderDropdownState extends State<GenderDropdown> {
       ),
       items: [
         DropdownMenuItem(
-          value: 'Mail',
+          value: 'Male',
           child: CustomText(
-            'Mail',
+            'Male',
             style: Styles.styleRegular12(
               context,
             ).copyWith(fontSize: 12, color: AppColors.blackColor),
           ),
         ),
         DropdownMenuItem(
-          value: 'Femail',
+          value: 'Female',
           child: CustomText(
-            'Femail',
+            'Female',
             style: Styles.styleRegular12(
               context,
             ).copyWith(fontSize: 12, color: AppColors.blackColor),

@@ -23,7 +23,7 @@ class SplashViewBody extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             AppColors.lightPrimaryColor,
-            AppColors.lightThemePrimaryColor,
+            AppColors.primaryColor,
             AppColors.darkPrimaryColor,
           ],
           begin: Alignment.topCenter,

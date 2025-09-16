@@ -25,9 +25,9 @@ class _RememberMeAndForgetPasswordSectionState extends State<RememberMeAndForget
     return Row(
       children: [
         Checkbox(
-          side: const BorderSide(color: AppColors.lightThemePrimaryColor),
+          side: const BorderSide(color: AppColors.primaryColor),
           checkColor: AppColors.secondaryColor,
-          activeColor: AppColors.lightThemePrimaryColor,
+          activeColor: AppColors.primaryColor,
           splashRadius: 0,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           visualDensity: VisualDensity.compact,
@@ -51,7 +51,7 @@ class _RememberMeAndForgetPasswordSectionState extends State<RememberMeAndForget
             'forget your password?',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
       ],

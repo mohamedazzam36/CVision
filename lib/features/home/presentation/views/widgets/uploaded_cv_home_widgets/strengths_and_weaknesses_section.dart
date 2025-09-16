@@ -25,7 +25,6 @@ class StrengthsAndWeaknessesSection extends StatelessWidget {
             Expanded(
               child: MainCvDetailsCard(
                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                opasity: 210,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -33,7 +32,7 @@ class StrengthsAndWeaknessesSection extends StatelessWidget {
                       'Strengths',
                       style: Styles.styleBold12(
                         context,
-                      ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                      ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                     ),
                     const Padding(
                       padding: EdgeInsets.only(left: 8),
@@ -53,7 +52,6 @@ class StrengthsAndWeaknessesSection extends StatelessWidget {
             Expanded(
               child: MainCvDetailsCard(
                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                opasity: 210,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -61,7 +59,7 @@ class StrengthsAndWeaknessesSection extends StatelessWidget {
                       'Weaknesses',
                       style: Styles.styleBold12(
                         context,
-                      ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+                      ).copyWith(fontSize: 12, color: AppColors.primaryColor),
                     ),
                     const Padding(
                       padding: EdgeInsets.only(left: 8),

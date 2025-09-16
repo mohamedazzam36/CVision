@@ -4,22 +4,21 @@ import 'package:flutter/material.dart';
 class MainCvDetailsCard extends StatelessWidget {
   const MainCvDetailsCard({
     super.key,
-    required this.opasity,
     required this.child,
     this.elevation = 5,
     this.padding,
+    this.backgroundColor,
   });
 
-  final int opasity;
   final Widget child;
   final double elevation;
   final EdgeInsetsGeometry? padding;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.secondaryColor.withAlpha(opasity),
-
+      color: backgroundColor ?? AppColors.secondaryColor,
       elevation: elevation,
       child: Container(
         padding: padding ?? const EdgeInsets.all(16),

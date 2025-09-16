@@ -1,6 +1,8 @@
 import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/functions/helper_functions.dart';
+import 'package:cvision/core/prefs/user_prefs.dart';
 import 'package:cvision/core/utils/app_router.dart';
+import 'package:cvision/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/custom_auth_button.dart';
 import 'package:cvision/features/settings/presentation/manager/cubit/logout_cubit.dart';
 import 'package:flutter/material.dart';
@@ -26,10 +28,12 @@ class LogoutButtonSection extends StatelessWidget {
           return Expanded(
             child: CustomAuthButton(
               text: 'Yes',
-              onPressed: () {
+              onPressed: () async {
                 BlocProvider.of<LogoutCubit>(context).logout();
                 context.layoutCubit.isCvUploaded = false;
                 context.layoutCubit.currentIndex = 0;
+                await UserPrefs.clearCurrentUser();
+                await AuthRepoImpl().setRememberMe(false);
               },
               isLoading: state is LogoutLoading,
             ),

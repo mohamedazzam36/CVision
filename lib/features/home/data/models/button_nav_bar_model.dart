@@ -1,5 +1,9 @@
 class ButtonNavBarModel {
-  final String iconPath, title;
+  final String iconPath, filledIconPath, title;
 
-  const ButtonNavBarModel({required this.iconPath, required this.title});
+  const ButtonNavBarModel({
+    required this.iconPath,
+    required this.title,
+    required this.filledIconPath,
+  });
 }

@@ -26,7 +26,7 @@ class AuthBodyWidget extends StatelessWidget {
         const SizedBox(height: 16),
         CustomAuthButton(
           text: 'Create Account',
-          textColor: AppColors.lightThemePrimaryColor,
+          textColor: AppColors.primaryColor,
           backgroundColor: AppColors.secondaryColor,
           onPressed: () => context.navigate(
             BlocProvider.value(

@@ -33,7 +33,7 @@ class AlreadyHaveAccountSection extends StatelessWidget {
             'Log In',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
       ],

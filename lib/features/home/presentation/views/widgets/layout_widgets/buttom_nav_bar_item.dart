@@ -25,7 +25,7 @@ class ButtomNavBarItem extends StatelessWidget {
         spacing: 6,
         children: [
           SvgPicture.asset(
-            item.iconPath,
+            isSelected ? item.filledIconPath : item.iconPath,
             colorFilter: ColorFilter.mode(
               isSelected ? AppColors.secondaryColor : const Color(0xff6F6D6D),
               BlendMode.srcIn,

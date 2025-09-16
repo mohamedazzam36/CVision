@@ -20,22 +20,17 @@ class UploadedCvLearningView extends StatelessWidget {
               'Your Personalized Road Map',
               style: Styles.styleBold16(
                 context,
-              ).copyWith(fontSize: 16, color: AppColors.secondaryColor),
+              ).copyWith(fontSize: 16, color: AppColors.blackColor),
             ),
             const SizedBox(
               height: 8,
             ),
-            CustomText(
-              'Track your progress and stay on top of your',
+            Text(
+              'Track your progress and stay on top of your\nlearning journey',
               style: Styles.styleRegular12(
                 context,
-              ).copyWith(fontSize: 12, color: AppColors.secondaryColor),
-            ),
-            CustomText(
-              'learning journey',
-              style: Styles.styleRegular12(
-                context,
-              ).copyWith(fontSize: 12, color: AppColors.secondaryColor),
+              ).copyWith(fontSize: 12, color: const Color(0xff6F6D6D)),
+              textAlign: TextAlign.center,
             ),
           ],
         ),

@@ -24,12 +24,12 @@ class GetStartedButton extends StatelessWidget {
         child: CustomOnBoardingButton(
           backgroundColor: AppColors.secondaryColor,
           text: context.onBoardingCubit.changeButtonText(),
-          textColor: AppColors.lightThemePrimaryColor,
+          textColor: AppColors.primaryColor,
           icon: context.onBoardingCubit.isLast == true
               ? const SizedBox()
               : const Icon(
                   Icons.arrow_forward_ios_outlined,
-                  color: AppColors.lightThemePrimaryColor,
+                  color: AppColors.primaryColor,
                 ),
           onPressed: () async {
             if (context.onBoardingCubit.isLast == true) {

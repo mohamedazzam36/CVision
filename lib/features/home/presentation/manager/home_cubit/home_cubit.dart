@@ -1,6 +1,5 @@
 import 'dart:convert';
-import 'dart:developer';
-
+import 'package:cvision/core/errors/api_failures.dart';
 import 'package:cvision/core/services/api_service.dart';
 import 'package:cvision/features/home/data/models/market_comparsion/market_comparsion.dart';
 import 'package:cvision/features/home/data/models/upload_cv_model/upload_cv_model.dart';
@@ -37,17 +36,34 @@ class HomeCubit extends Cubit<HomeStates> {
 
     emit(UploadedCvToApiLoading());
 
-    var value = await ApiService.post(
-      "/analysis/start",
-      data: formData,
-      contentType: 'multipart/form-data',
-    );
-    uploadCvModel = UploadCvModel.fromJson(value.data);
-    emit(UploadedCvToApiSuccess());
+    try {
+      var value = await ApiService.post(
+        "/analysis/start",
+        data: formData,
+        contentType: 'multipart/form-data',
+      );
+      uploadCvModel = UploadCvModel.fromJson(value.data);
+      emit(UploadedCvToApiSuccess());
+    } on DioException catch (e) {
+      emit(UploadedCvToApiFailure(errMessage: ApiFailures.fromDioException(e).errMessage));
+    } catch (e) {
+      emit(UploadedCvToApiFailure(errMessage: e.toString()));
+    }
   }
 
   Future<void> pickAndUploadFile() async {
     final file = await pickFile();
+    if (file != null && file.path != null) {
+      await uploadFileToApi(file.path!);
+    } else {
+      print("File Not found");
+    }
+  }
+
+  Future<void> rePickAndUploadFile() async {
+    final file = await pickFile();
+    emit(ReUploadedCvToApi());
+
     if (file != null && file.path != null) {
       await uploadFileToApi(file.path!);
     } else {
@@ -67,15 +83,19 @@ class HomeCubit extends Cubit<HomeStates> {
       },
     };
 
-    var value = await ApiService.post(
-      "/analysis/${uploadCvModel!.data!.analysisData!.analysisId}/compare",
-      data: jsonEncode(body),
-      contentType: 'application/json',
-    );
+    try {
+      var value = await ApiService.post(
+        "/analysis/${uploadCvModel!.data!.analysisData!.analysisId}/compare",
+        data: jsonEncode(body),
+        contentType: 'application/json',
+      );
 
-    log(value.data.toString());
-
-    marketComparsion = MarketComparsion.fromJson(value.data);
-    emit(GetSkillsSuccessState());
+      marketComparsion = MarketComparsion.fromJson(value.data);
+      emit(GetSkillsSuccessState());
+    } on DioException catch (e) {
+      emit(GetSkillsFailureState(errMessage: ApiFailures.fromDioException(e).errMessage));
+    } catch (e) {
+      emit(GetSkillsFailureState(errMessage: e.toString()));
+    }
   }
 }

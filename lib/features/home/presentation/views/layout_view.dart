@@ -1,5 +1,6 @@
 import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/extensions/helper_extensions.dart';
+import 'package:cvision/core/functions/helper_functions.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_states.dart';
 import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
@@ -19,6 +20,10 @@ class LayoutView extends StatelessWidget {
       listener: (context, state) {
         if (state is UploadedCvToApiSuccess) {
           context.navigate(const UploadedCvView());
+        } else if (state is UploadedCvToApiFailure) {
+          customSnackBar(context, state.errMessage);
+        } else if (state is ReUploadedCvToApi) {
+          Navigator.pop(context);
         }
       },
       builder: (context, state) => ModalProgressHUD(
@@ -26,6 +31,7 @@ class LayoutView extends StatelessWidget {
         child: BlocBuilder<LayoutCubit, LayoutStates>(
           builder: (context, state) {
             return Scaffold(
+              extendBody: true,
               body: context.layoutCubit.screens[context.layoutCubit.currentIndex],
               bottomNavigationBar: const CustomButtomNavBar(),
             );

@@ -11,10 +11,12 @@ class ContentOfContainer extends StatelessWidget {
     required this.titleOfSkills,
     required this.iconPath,
     required this.dummySkills,
+    required this.progressValue,
   });
 
   final String titleOfSkills, iconPath;
   final List<LearningSkillsModel> dummySkills;
+  final double progressValue;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,9 @@ class ContentOfContainer extends StatelessWidget {
             ),
             Text(
               titleOfSkills,
-              style: Styles.styleBold12(context).copyWith(
+              style: Styles.styleBlack12(context).copyWith(
                 fontSize: 12,
-                color: AppColors.secondaryColor,
+                color: AppColors.blackColor,
               ),
             ),
           ],
@@ -41,6 +43,7 @@ class ContentOfContainer extends StatelessWidget {
         ),
         ListOfSkills(
           dummySkills: dummySkills,
+          progressValue: progressValue,
         ),
       ],
     );

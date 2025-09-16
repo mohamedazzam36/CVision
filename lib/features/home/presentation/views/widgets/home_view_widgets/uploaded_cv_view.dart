@@ -42,6 +42,7 @@ class UploadedCvView extends StatelessWidget {
                   height: 56,
                 ),
                 UploadBox(
+                  isDotted: false,
                   fileIcon: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 36),
                     child: Row(
@@ -76,7 +77,7 @@ class UploadedCvView extends StatelessWidget {
                       Expanded(
                         child: CustomElevatedButton(
                           text: 'Reupload',
-                          onPressed: () => context.homeCubit.pickAndUploadFile(),
+                          onPressed: () => context.homeCubit.rePickAndUploadFile(),
                           height: 35,
                           textColor: AppColors.primaryColor,
                           backgroundColor: AppColors.lightThemePrimaryColor,

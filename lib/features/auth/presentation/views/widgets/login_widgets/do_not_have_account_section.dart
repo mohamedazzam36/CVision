@@ -33,7 +33,7 @@ class DoNotHaveAccountSection extends StatelessWidget {
             'Create Account',
             style: Styles.styleLight12(
               context,
-            ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            ).copyWith(fontSize: 12, color: AppColors.primaryColor),
           ),
         ),
       ],
