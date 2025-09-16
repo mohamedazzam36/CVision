@@ -3,8 +3,8 @@ import 'package:cvision/core/utils/app_styles.dart';
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class CustomAuthButton extends StatelessWidget {
-  const CustomAuthButton({
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton({
     super.key,
     this.backgroundColor = AppColors.primaryColor,
     required this.text,
@@ -13,6 +13,12 @@ class CustomAuthButton extends StatelessWidget {
     this.isDisabled = false,
     this.isLoading = false,
     this.borderColor = AppColors.primaryColor,
+    this.width = double.infinity,
+    this.height = 50,
+    this.elevation = 4,
+    this.textStyle,
+    this.fontSize = 12,
+    this.prefixIcon,
   });
 
   final Color backgroundColor;
@@ -22,17 +28,21 @@ class CustomAuthButton extends StatelessWidget {
   final bool isDisabled;
   final bool isLoading;
   final void Function() onPressed;
+  final double width, height, elevation, fontSize;
+  final TextStyle? textStyle;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
     return AbsorbPointer(
       absorbing: isDisabled || isLoading,
       child: SizedBox(
-        height: 50,
-        width: double.infinity,
-        child: TextButton(
+        height: height,
+        width: width,
+        child: ElevatedButton(
           onPressed: onPressed,
-          style: TextButton.styleFrom(
+          style: ElevatedButton.styleFrom(
+            elevation: elevation,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(32),
               side: BorderSide(
@@ -51,11 +61,20 @@ class CustomAuthButton extends StatelessWidget {
                     color: textColor.withAlpha(200),
                   ),
                 )
-              : CustomText(
-                  text,
-                  style: Styles.styleLight16(
-                    context,
-                  ).copyWith(color: textColor, fontSize: 16),
+              : Row(
+                  spacing: 1,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ?prefixIcon,
+                    CustomText(
+                      text,
+                      style:
+                          textStyle ??
+                          Styles.styleBold12(
+                            context,
+                          ).copyWith(color: textColor, fontSize: fontSize),
+                    ),
+                  ],
                 ),
         ),
       ),

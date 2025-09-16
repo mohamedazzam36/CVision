@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_styles.dart';
@@ -16,8 +14,8 @@ class NoCvUploadedViewBody extends StatelessWidget {
     return SliverFillRemaining(
       hasScrollBody: false,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const Spacer(),
           Text(
             "You haven’t uploaded your CV yet.",
             style: Styles.styleBold16(context).copyWith(
@@ -45,8 +43,8 @@ class NoCvUploadedViewBody extends StatelessWidget {
                     context,
                   ).copyWith(color: const Color(0xff7B7575)),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: Icon(
                     Icons.cloud_upload_outlined,
                     size: 48,
@@ -55,6 +53,12 @@ class NoCvUploadedViewBody extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          const Spacer(
+            flex: 2,
+          ),
+          const SizedBox(
+            height: 24,
           ),
         ],
       ),

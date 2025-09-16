@@ -18,6 +18,13 @@ class SettingsViewBody extends StatelessWidget {
             color: AppColors.secondaryColor,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: const Color(0xffE6E8EB)),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.blackColor.withAlpha(150),
+                blurRadius: 5,
+                offset: const Offset(0, 1),
+              ),
+            ],
           ),
           child: const CustomSettingsListView(),
         ),

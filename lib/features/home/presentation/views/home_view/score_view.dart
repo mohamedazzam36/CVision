@@ -31,14 +31,24 @@ class ScoreView extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 65,
+                      height: 20,
                     ),
                     const CircularScore(
-                      progressColor: AppColors.lightThemePrimaryColor,
+                      progressColor: AppColors.primaryColor,
                       lineWidth: 13,
                       percent: .72,
                       radius: 80,
-                      backgroundColor: Color(0xffEFD9F5),
+                      backgroundColor: AppColors.lightThemePrimaryColor,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'We’ve analyzed your CV, uncovered your strengths and areas to improve, and recommended the best specialization to boost your career journey!',
+                      style: Styles.styleRegular16(context).copyWith(
+                        fontSize: 16,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                     const SizedBox(
                       height: 35,

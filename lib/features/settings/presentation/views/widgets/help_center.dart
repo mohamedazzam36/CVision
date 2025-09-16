@@ -19,7 +19,8 @@ class HelpCenter extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(Assets.imagesHelpCenterBackgound)),
+                image: AssetImage(Assets.imagesHelpCenterBackgound),
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +42,8 @@ class HelpCenter extends StatelessWidget {
                           fontSize: 16,
                           color: AppColors.primaryColor,
                           decoration: TextDecoration.underline,
-                          decorationColor: AppColors.lightThemePrimaryColor,
+                          decorationThickness: 2,
+                          decorationColor: AppColors.primaryColor,
                         ),
                   ),
                 ),

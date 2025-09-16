@@ -12,13 +12,12 @@ class DetectedSkillsListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color skillColor = skillScore < 50 ? const Color(0xffFFCC00) : const Color(0xff27C840);
+    final Color skillColor = skillScore < 50 ? const Color(0xffE57373) : const Color(0xff26C6DA);
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.symmetric(vertical: 12.5, horizontal: 16),
       decoration: BoxDecoration(
-        color: AppColors.secondaryColor.withAlpha(200),
+        color: AppColors.secondaryColor,
         borderRadius: BorderRadius.circular(16),
         border: Border(
           left: BorderSide(
@@ -31,7 +30,7 @@ class DetectedSkillsListViewItem extends StatelessWidget {
         children: [
           const CircleAvatar(
             radius: 16,
-            backgroundColor: AppColors.lightThemePrimaryColor,
+            backgroundColor: AppColors.primaryColor,
             child: Icon(Icons.insert_drive_file, color: AppColors.secondaryColor),
           ),
           const SizedBox(
@@ -49,7 +48,7 @@ class DetectedSkillsListViewItem extends StatelessWidget {
                   value: skillScore / 100,
                   height: 8,
                   progressColor: skillColor,
-                  backgroundColor: AppColors.secondaryColor,
+                  backgroundColor: const Color(0xffEDE7F6),
                 ),
               ],
             ),

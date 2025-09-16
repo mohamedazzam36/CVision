@@ -1,9 +1,11 @@
 import 'package:cvision/core/extensions/helper_extensions.dart';
 import 'package:cvision/core/utils/app_colors.dart';
+import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/core/utils/app_styles.dart';
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:cvision/features/home/presentation/views/widgets/profile_view_widgets/profile_edit_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileEditButton extends StatelessWidget {
   const ProfileEditButton({super.key});
@@ -20,16 +22,15 @@ class ProfileEditButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           elevation: 5,
           backgroundColor: AppColors.secondaryColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(12)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(12),
+            side: const BorderSide(color: AppColors.blackColor),
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.edit,
-              color: AppColors.blackColor,
-              size: 16,
-            ),
+            SvgPicture.asset(Assets.imagesEditIcon),
             const SizedBox(
               width: 4,
             ),

@@ -10,6 +10,7 @@ class ContactUsTextField extends StatelessWidget {
     this.maxLines = 1,
     this.initialValue,
     this.hintStyle,
+    this.canEdit = true,
   });
 
   final String hintText;
@@ -17,10 +18,12 @@ class ContactUsTextField extends StatelessWidget {
   final int maxLines;
   final String? initialValue;
   final TextStyle? hintStyle;
+  final bool canEdit;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: !canEdit,
       initialValue: initialValue,
       maxLines: maxLines,
       onSaved: onSaved,
@@ -35,10 +38,12 @@ class ContactUsTextField extends StatelessWidget {
         hintText: hintText,
         contentPadding: const EdgeInsetsDirectional.only(start: 16, top: 32),
         hintStyle: hintStyle ?? Styles.styleRegular12(context).copyWith(fontSize: 12),
-        fillColor: AppColors.secondaryColor,
+        fillColor: canEdit ? AppColors.secondaryColor : const Color(0xffBEB4C0),
         filled: true,
-        enabledBorder: _buildBorder(AppColors.secondaryColor),
-        focusedBorder: _buildBorder(AppColors.lightThemePrimaryColor),
+        enabledBorder: _buildBorder(
+          const Color(0xffE6E8EB),
+        ),
+        focusedBorder: _buildBorder(AppColors.primaryColor),
         errorBorder: _buildBorder(Colors.red),
         focusedErrorBorder: _buildBorder(Colors.red),
       ),
@@ -48,7 +53,7 @@ class ContactUsTextField extends StatelessWidget {
   OutlineInputBorder _buildBorder(Color color) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide(color: color),
+      borderSide: BorderSide(color: color, width: canEdit ? 2 : 0),
     );
   }
 }

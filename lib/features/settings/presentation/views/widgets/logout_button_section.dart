@@ -1,3 +1,4 @@
+import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/functions/helper_functions.dart';
 import 'package:cvision/core/utils/app_router.dart';
 import 'package:cvision/features/auth/presentation/views/widgets/auth_widgets/custom_auth_button.dart';
@@ -27,6 +28,8 @@ class LogoutButtonSection extends StatelessWidget {
               text: 'Yes',
               onPressed: () {
                 BlocProvider.of<LogoutCubit>(context).logout();
+                context.layoutCubit.isCvUploaded = false;
+                context.layoutCubit.currentIndex = 0;
               },
               isLoading: state is LogoutLoading,
             ),

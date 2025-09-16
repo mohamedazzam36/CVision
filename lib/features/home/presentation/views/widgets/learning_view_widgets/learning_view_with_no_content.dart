@@ -1,4 +1,5 @@
 import 'package:cvision/core/extensions/helper_extensions.dart';
+import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:cvision/features/home/presentation/views/widgets/layout_widgets/main_layout_structure.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,39 +16,37 @@ class LearningViewWithNoContent extends StatelessWidget {
     return Scaffold(
       body: MainLayoutStructure(
         appBarTitle: '',
-        sliver: SliverToBoxAdapter(
+        sliver: SliverFillRemaining(
+          hasScrollBody: false,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const Spacer(),
               Image.asset(
                 Assets.imagesLearning,
-                width: context.width * .5,
-                height: context.width * .5,
+                width: 303,
+                height: 260,
               ),
               SizedBox(
                 height: context.height * .03,
               ),
-              Text(
+              CustomText(
                 "No learning path yet.",
-                style: Styles.styleMedium14(context).copyWith(
-                  fontSize: 24,
-                  color: AppColors.secondaryColor.withValues(
-                    alpha: .5,
-                  ),
-                ),
+                style: Styles.styleBold24(
+                  context,
+                ).copyWith(fontSize: 24, color: AppColors.blackColor.withAlpha(180)),
               ),
               SizedBox(
                 height: context.height * .01,
               ),
               Text(
                 "Upload your CV to get personalized courses\n and resources tailored to your goals.",
-                style: Styles.styleLight16(context).copyWith(
+                style: Styles.styleRegular16(context).copyWith(
                   fontSize: 16,
-                  color: AppColors.secondaryColor.withValues(
-                    alpha: .4,
-                  ),
                 ),
+                textAlign: TextAlign.center,
+              ),
+              const Spacer(
+                flex: 4,
               ),
             ],
           ),

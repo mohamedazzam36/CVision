@@ -1,5 +1,7 @@
 import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/prefs/user_prefs.dart';
+import 'package:cvision/core/utils/app_colors.dart';
+import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_states.dart';
 import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
@@ -9,10 +11,10 @@ import 'package:cvision/features/home/presentation/views/widgets/layout_widgets/
 import 'package:cvision/features/home/presentation/views/widgets/uploaded_cv_home_widgets/uploaded_cv_home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../../core/utils/app_colors.dart';
+import 'package:flutter_svg/svg.dart';
 
-class NotUploadedCvView extends StatelessWidget {
-  const NotUploadedCvView({super.key});
+class HomeViewBody extends StatelessWidget {
+  const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,18 @@ class NotUploadedCvView extends StatelessWidget {
             return MainLayoutStructure(
               appBarTitle: 'Hello, ${UserPrefs.currentUser.name} !',
               appBarSubTitle: 'Your job journey starts from here.',
-              appBarActionIcon: const Icon(
-                Icons.notifications,
+              appBarActionIcon: FittedBox(
+                child: Card(
+                  elevation: 5,
+                  shape: const OvalBorder(),
+                  color: AppColors.secondaryColor,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SvgPicture.asset(
+                      Assets.imagesNotificationIcon,
+                    ),
+                  ),
+                ),
               ),
               sliver: context.layoutCubit.isCvUploaded
                   ? const UploadedCvHomeViewBody()

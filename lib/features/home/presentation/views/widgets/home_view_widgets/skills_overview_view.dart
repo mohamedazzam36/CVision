@@ -1,9 +1,10 @@
 import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/extensions/helper_extensions.dart';
+import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/core/utils/app_styles.dart';
 import 'package:cvision/core/widgets/custom_back_and_title_structure.dart';
-import 'package:cvision/core/widgets/custom_dotted_button.dart';
+import 'package:cvision/core/widgets/custom_elevated_button.dart';
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/detected_skills_view.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/skills_overview_wraper.dart';
@@ -18,9 +19,9 @@ class SkillsOverviewView extends StatelessWidget {
     return Scaffold(
       body: CustomBackAndTitleStructure(
         appBarTitle: 'Your Skills Overview',
-        hasShodow: true,
         sliver: SliverToBoxAdapter(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -30,7 +31,9 @@ class SkillsOverviewView extends StatelessWidget {
                   ),
                   CustomText(
                     'Technical Skills',
-                    style: Styles.styleBlack12(context).copyWith(fontSize: 12),
+                    style: Styles.styleBlack12(
+                      context,
+                    ).copyWith(fontSize: 12, color: AppColors.blackColor),
                   ),
                 ],
               ),
@@ -58,7 +61,9 @@ class SkillsOverviewView extends StatelessWidget {
                   ),
                   CustomText(
                     'Soft Skills',
-                    style: Styles.styleBlack12(context).copyWith(fontSize: 12),
+                    style: Styles.styleBlack12(
+                      context,
+                    ).copyWith(fontSize: 12, color: AppColors.blackColor),
                   ),
                 ],
               ),
@@ -76,9 +81,9 @@ class SkillsOverviewView extends StatelessWidget {
                     .soft!,
               ),
               const SizedBox(
-                height: 124,
+                height: 96,
               ),
-              CustomDottedButton(
+              CustomElevatedButton(
                 text: 'Continue',
                 onPressed: () {
                   context.navigate(const DetectedSkillsView());

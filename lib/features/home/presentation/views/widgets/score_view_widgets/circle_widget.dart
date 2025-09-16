@@ -22,6 +22,7 @@ class CircularScore extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(shape: BoxShape.circle, color: backgroundColor),
       child: CircularPercentIndicator(
+        reverse: true,
         radius: radius,
         lineWidth: lineWidth,
         percent: percent,
@@ -34,12 +35,15 @@ class CircularScore extends StatelessWidget {
                 context,
               ).copyWith(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.black),
             ),
-            Text("${percent * 100}%", style: Styles.styleRegular28(context).copyWith(fontSize: 32)),
+            Text(
+              "${(percent * 100).toInt()}%",
+              style: Styles.styleRegular28(context).copyWith(fontSize: 32),
+            ),
           ],
         ),
         progressBorderColor: progressColor,
         progressColor: progressColor,
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffD9D9D9),
         circularStrokeCap: CircularStrokeCap.square,
       ),
     );

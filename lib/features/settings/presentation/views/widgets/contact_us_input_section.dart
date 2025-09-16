@@ -31,6 +31,7 @@ class ContactUsInputSection extends StatelessWidget {
           hintText: 'Enter the email',
           initialValue: 'cvision.help@gmail.com',
           onSaved: onEmailSaved,
+          canEdit: false,
         ),
         const SizedBox(
           height: 16,

@@ -9,11 +9,14 @@ class TopStrengthSkillsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       padding: const EdgeInsets.all(0),
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: skillsList.length,
+      separatorBuilder: (context, index) => const SizedBox(
+        height: 12,
+      ),
       itemBuilder: (context, index) {
         return DetectedSkillsListViewItem(
           skillName: skillsList[index].skill!,

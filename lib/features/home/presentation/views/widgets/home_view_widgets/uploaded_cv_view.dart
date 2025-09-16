@@ -2,6 +2,7 @@ import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/extensions/helper_extensions.dart';
 import 'package:cvision/core/utils/app_images.dart';
 import 'package:cvision/core/widgets/custom_back_and_title_structure.dart';
+import 'package:cvision/core/widgets/custom_elevated_button.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:cvision/features/home/presentation/manager/home_cubit/home_states.dart';
 import 'package:cvision/features/home/presentation/views/home_view/loading_view.dart';
@@ -11,7 +12,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import 'custom_elevated_button.dart';
 
 class UploadedCvView extends StatelessWidget {
   const UploadedCvView({super.key});
@@ -43,7 +43,7 @@ class UploadedCvView extends StatelessWidget {
                 ),
                 UploadBox(
                   fileIcon: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 60),
+                    padding: const EdgeInsets.symmetric(vertical: 36),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -68,26 +68,18 @@ class UploadedCvView extends StatelessWidget {
                     children: [
                       Expanded(
                         child: CustomElevatedButton(
-                          onPressed: () {
-                            context.navigate(const ProgressPage());
-                          },
+                          text: 'Continue',
+                          onPressed: () => context.navigate(const ProgressPage()),
                           height: 35,
-                          fontSize: 12,
-                          textColor: Colors.white,
-                          buttonColor: AppColors.primaryColor,
-                          buttonName: "Continue",
                         ),
                       ),
                       Expanded(
                         child: CustomElevatedButton(
-                          onPressed: () {
-                            context.homeCubit.pickAndUploadFile();
-                          },
+                          text: 'Reupload',
+                          onPressed: () => context.homeCubit.pickAndUploadFile(),
                           height: 35,
-                          fontSize: 12,
                           textColor: AppColors.primaryColor,
-                          buttonColor: Colors.transparent,
-                          buttonName: "Reupload",
+                          backgroundColor: AppColors.lightThemePrimaryColor,
                         ),
                       ),
                     ],

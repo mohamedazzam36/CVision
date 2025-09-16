@@ -13,6 +13,7 @@ class SkillsOverviewWraperItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.secondaryColor,
         borderRadius: BorderRadius.circular(40),
+        border: Border.all(color: AppColors.blackColor),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

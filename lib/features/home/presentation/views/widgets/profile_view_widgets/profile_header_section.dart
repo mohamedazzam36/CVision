@@ -1,4 +1,6 @@
+import 'package:cvision/core/extensions/access_cubits_extensions.dart';
 import 'package:cvision/core/prefs/user_prefs.dart';
+import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_styles.dart';
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:cvision/features/home/presentation/views/widgets/profile_view_widgets/profile_edit_button.dart';
@@ -26,11 +28,11 @@ class ProfileHeaderSection extends StatelessWidget {
           height: 4,
         ),
         CustomText(
-          'Specialization not set',
+          context.layoutCubit.isCvUploaded ? 'Flutter Developer' : 'Specialization not set',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w900,
-            color: const Color(0xffFFFFFF).withAlpha(150),
+            color: AppColors.blackColor.withAlpha(130),
           ),
         ),
         const SizedBox(

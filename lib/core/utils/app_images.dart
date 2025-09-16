@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesBlueCheckIcon
+  /// assets/images/blue_check_icon.svg
+  static const String imagesBlueCheckIcon = "assets/images/blue_check_icon.svg";
+
   /// Assets for imagesCompletedSkillIcon
   /// assets/images/completed_skill_icon.svg
   static const String imagesCompletedSkillIcon = "assets/images/completed_skill_icon.svg";
@@ -13,6 +17,10 @@ class Assets {
   /// Assets for imagesCvFileIcon
   /// assets/images/cv_file_icon.svg
   static const String imagesCvFileIcon = "assets/images/cv_file_icon.svg";
+
+  /// Assets for imagesEditIcon
+  /// assets/images/edit_icon.svg
+  static const String imagesEditIcon = "assets/images/edit_icon.svg";
 
   /// Assets for imagesEmailAnimation
   /// assets/images/email_animation.json
@@ -40,7 +48,11 @@ class Assets {
 
   /// Assets for imagesHelpCenterBackgound
   /// assets/images/help_center_backgound.png
-  static const String imagesHelpCenterBackgound = "assets/images/background_help_center_screen.png";
+  static const String imagesHelpCenterBackgound = "assets/images/help_center_backgound.png";
+
+  /// Assets for imagesImprovementSkillsIcon
+  /// assets/images/improvement_skills_icon.svg
+  static const String imagesImprovementSkillsIcon = "assets/images/improvement_skills_icon.svg";
 
   /// Assets for imagesInProgressSkillIcon
   /// assets/images/in_progress_skill_icon.svg
@@ -57,6 +69,10 @@ class Assets {
   /// Assets for imagesNextStepIcon
   /// assets/images/next_step_icon.svg
   static const String imagesNextStepIcon = "assets/images/next_step_icon.svg";
+
+  /// Assets for imagesNotificationIcon
+  /// assets/images/notification_icon.svg
+  static const String imagesNotificationIcon = "assets/images/notification_icon.svg";
 
   /// Assets for imagesOnBoarding1
   /// assets/images/on_boarding1.png

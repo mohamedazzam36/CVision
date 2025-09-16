@@ -16,8 +16,14 @@ class FaqListViewItem extends StatelessWidget {
       child: ExpansionTile(
         childrenPadding: const EdgeInsets.all(0),
         expandedAlignment: Alignment.centerLeft,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        collapsedShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(color: Color(0xffE6E8EB)),
+        ),
+        collapsedShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(color: Color(0xffE6E8EB)),
+        ),
         collapsedBackgroundColor: AppColors.secondaryColor,
         backgroundColor: AppColors.secondaryColor,
         title: CustomText(

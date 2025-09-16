@@ -13,39 +13,37 @@ class SkillsViewWithNoContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainLayoutStructure(
       appBarTitle: '',
-      sliver: SliverToBoxAdapter(
+      sliver: SliverFillRemaining(
+        hasScrollBody: false,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Spacer(),
             Image.asset(
               Assets.imagesSkills,
-              width: context.width * .5,
-              height: context.width * .5,
+              width: 250,
+              height: 260,
             ),
             SizedBox(
               height: context.height * .03,
             ),
             Text(
               "No skills detected yet.",
-              style: Styles.styleMedium14(context).copyWith(
-                fontSize: 24,
-                color: AppColors.secondaryColor.withValues(
-                  alpha: .5,
-                ),
-              ),
+              style: Styles.styleBold24(
+                context,
+              ).copyWith(fontSize: 24, color: AppColors.blackColor.withAlpha(180)),
             ),
             SizedBox(
               height: context.height * .01,
             ),
             Text(
               "Upload your CV to unlock\n your skills insights.",
-              style: Styles.styleLight16(context).copyWith(
+              style: Styles.styleRegular16(context).copyWith(
                 fontSize: 16,
-                color: AppColors.secondaryColor.withValues(
-                  alpha: .4,
-                ),
               ),
+              textAlign: TextAlign.center,
+            ),
+            const Spacer(
+              flex: 4,
             ),
           ],
         ),

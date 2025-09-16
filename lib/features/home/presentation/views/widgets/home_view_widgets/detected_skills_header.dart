@@ -29,7 +29,7 @@ class DetectedSkillsHeader extends StatelessWidget {
           '$title (4)',
           style: Styles.styleBold16(
             context,
-          ).copyWith(fontSize: 16, color: AppColors.secondaryColor),
+          ).copyWith(fontSize: 16, color: AppColors.blackColor),
         ),
       ],
     );

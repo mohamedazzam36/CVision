@@ -27,16 +27,19 @@ class ProfileProgressHeader extends StatelessWidget {
             ? const SizedBox()
             : const Icon(
                 Icons.upload,
-                color: AppColors.lightThemePrimaryColor,
+                color: AppColors.primaryColor,
                 size: 16,
               ),
         cvLoaded
             ? const SizedBox()
-            : CustomText(
-                'Upload CV',
-                style: Styles.styleRegular12(
-                  context,
-                ).copyWith(fontSize: 12, color: AppColors.lightThemePrimaryColor),
+            : GestureDetector(
+                onTap: () => context.homeCubit.pickAndUploadFile(),
+                child: CustomText(
+                  'Upload CV',
+                  style: Styles.styleRegular12(
+                    context,
+                  ).copyWith(fontSize: 12, color: AppColors.primaryColor),
+                ),
               ),
       ],
     );

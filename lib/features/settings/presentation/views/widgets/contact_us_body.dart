@@ -1,5 +1,5 @@
 import 'package:cvision/core/functions/helper_functions.dart';
-import 'package:cvision/features/settings/presentation/views/widgets/contact_us_button.dart';
+import 'package:cvision/core/widgets/custom_elevated_button.dart';
 import 'package:cvision/features/settings/presentation/views/widgets/contact_us_input_section.dart';
 import 'package:flutter/widgets.dart';
 
@@ -27,7 +27,8 @@ class _ContactUsBodyState extends State<ContactUsBody> {
           const SizedBox(
             height: 120,
           ),
-          ContactUsButton(
+          CustomElevatedButton(
+            text: 'Send Message',
             onPressed: () async {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();

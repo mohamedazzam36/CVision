@@ -47,7 +47,7 @@ class LogoutBottomSheet extends StatelessWidget {
                     text: 'Cancel',
                     onPressed: () => Navigator.pop(context),
                     backgroundColor: AppColors.secondaryColor,
-                    textColor: AppColors.lightThemePrimaryColor,
+                    textColor: AppColors.primaryColor,
                   ),
                 ),
                 const SizedBox(

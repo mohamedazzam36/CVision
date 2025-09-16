@@ -29,7 +29,7 @@ class _LoadingProgressIndecatorState extends State<LoadingProgressIndecator> {
       value: widget.value,
       minHeight: 13,
       borderRadius: BorderRadius.circular(42),
-      color: AppColors.lightThemePrimaryColor,
+      color: AppColors.primaryColor,
       backgroundColor: const Color(0xffD9D9D9),
     );
   }

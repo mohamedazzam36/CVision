@@ -8,25 +8,29 @@ class ProfileProgressWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: const Color(0xffffffff).withAlpha(180),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: const Column(
-        children: [
-          ProfileProgressHeader(),
-          SizedBox(
-            height: 16,
-          ),
-          ProfileProgressScoreSection(),
-          SizedBox(
-            height: 28,
-          ),
-          ProfileProgressInfoSection(),
-        ],
+    return Card(
+      margin: const EdgeInsets.all(0),
+      elevation: 8,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: const Color(0xffffffff).withAlpha(180),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: const Column(
+          children: [
+            ProfileProgressHeader(),
+            SizedBox(
+              height: 16,
+            ),
+            ProfileProgressScoreSection(),
+            SizedBox(
+              height: 28,
+            ),
+            ProfileProgressInfoSection(),
+          ],
+        ),
       ),
     );
   }

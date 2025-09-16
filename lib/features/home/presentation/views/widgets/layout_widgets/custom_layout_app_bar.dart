@@ -1,4 +1,3 @@
-import 'package:cvision/core/utils/app_colors.dart';
 import 'package:cvision/core/utils/app_styles.dart';
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -42,9 +41,12 @@ class CustomLayoutAppBar extends StatelessWidget {
                   ? const SizedBox()
                   : CustomText(
                       appBarSubTitle!,
-                      style: Styles.styleRegular12(
-                        context,
-                      ).copyWith(fontSize: 12,),
+                      style:
+                          Styles.styleRegular12(
+                            context,
+                          ).copyWith(
+                            fontSize: 12,
+                          ),
                     ),
             ],
           ),
