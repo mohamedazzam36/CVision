@@ -5,10 +5,10 @@ import 'package:cvision/features/home/presentation/manager/home_cubit/home_state
 import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
 import 'package:cvision/features/home/presentation/manager/layout_cubit/layout_states.dart';
 import 'package:cvision/features/home/presentation/views/widgets/home_view_widgets/uploaded_cv_view.dart';
+import 'package:cvision/features/home/presentation/views/widgets/layout_widgets/custom_buttom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class LayoutView extends StatelessWidget {
   const LayoutView({super.key});
@@ -27,23 +27,7 @@ class LayoutView extends StatelessWidget {
           builder: (context, state) {
             return Scaffold(
               body: context.layoutCubit.screens[context.layoutCubit.currentIndex],
-              bottomNavigationBar: Container(
-                width: context.width,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: SalomonBottomBar(
-                  duration: const Duration(
-                    milliseconds: 300,
-                  ),
-                  curve: Curves.easeOut,
-                  currentIndex: context.layoutCubit.currentIndex,
-                  onTap: (i) {
-                    context.layoutCubit.changeBottomNavBar(i);
-                  },
-                  items: context.layoutCubit.items,
-                ),
-              ),
+              bottomNavigationBar: const CustomButtomNavBar(),
             );
           },
         ),

@@ -50,6 +50,10 @@ class Assets {
   /// assets/images/help_center_backgound.png
   static const String imagesHelpCenterBackgound = "assets/images/help_center_backgound.png";
 
+  /// Assets for imagesHomeIcon
+  /// assets/images/home_icon.svg
+  static const String imagesHomeIcon = "assets/images/home_icon.svg";
+
   /// Assets for imagesImprovementSkillsIcon
   /// assets/images/improvement_skills_icon.svg
   static const String imagesImprovementSkillsIcon = "assets/images/improvement_skills_icon.svg";
@@ -98,9 +102,17 @@ class Assets {
   /// assets/images/png_logo.png
   static const String imagesPngLogo = "assets/images/png_logo.png";
 
+  /// Assets for imagesProfileIcon
+  /// assets/images/profile_icon.svg
+  static const String imagesProfileIcon = "assets/images/profile_icon.svg";
+
   /// Assets for imagesRecommendedProjectsIcon
   /// assets/images/recommended_projects_icon.svg
   static const String imagesRecommendedProjectsIcon = "assets/images/recommended_projects_icon.svg";
+
+  /// Assets for imagesRoadmapIcon
+  /// assets/images/roadmap_icon.svg
+  static const String imagesRoadmapIcon = "assets/images/roadmap_icon.svg";
 
   /// Assets for imagesSettingsIcon
   /// assets/images/settings_icon.svg
@@ -125,6 +137,10 @@ class Assets {
   /// Assets for imagesSkills
   /// assets/images/skills.png
   static const String imagesSkills = "assets/images/skills.png";
+
+  /// Assets for imagesSkillsIcon
+  /// assets/images/skills_icon.svg
+  static const String imagesSkillsIcon = "assets/images/skills_icon.svg";
 
   /// Assets for imagesSoftSkillsIcon
   /// assets/images/soft_skills_icon.svg
