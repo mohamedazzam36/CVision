@@ -18,8 +18,6 @@ CVision is an AI-powered mobile application built to support students and fresh 
 
 ✅ Track progress (completed / not completed).
 
-🔔 Notifications & reminders for learning milestones.
-
 # 🛠️ Technologies 
 
 1. Flutter (Dart) → For building cross-platform mobile apps.
