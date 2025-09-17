@@ -117,13 +117,13 @@ Python 3.8+ (for AI API server)
 pip (Python package installer)
 
 ## Clone & Run the Flutter App
-# Clone the repository
+Clone the repository:
 git clone https://github.com/mohamedazzam36/CVision.git
 
 cd CVision
 
-# Get Flutter packages
+Get Flutter packages:
 flutter pub get
 
-# Run the app
+Run the app:
 flutter run
