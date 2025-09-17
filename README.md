@@ -61,7 +61,7 @@ Prediction:
 
 ## 🌍 User Roles
 
-# 👤 Students / Graduates
+👤 Students / Graduates
 
 - Upload CVs
 
@@ -71,7 +71,7 @@ Prediction:
 
 - Track progress
 
-# 🏢 (Future Scope: Companies / Recruiters)
+🏢 (Future Scope: Companies / Recruiters)
 
 - Post job requirements
 
@@ -109,13 +109,17 @@ https://drive.google.com/file/d/1xCukPkzIo5bo2VD8VqL_WR9lMjDn2czB/view?usp=shari
 # Prerequisites
 
 Flutter SDK
+
 Dart SDK
+
 Python 3.8+ (for AI API server)
+
 pip (Python package installer)
 
 ## Clone & Run the Flutter App
 # Clone the repository
 git clone https://github.com/mohamedazzam36/CVision.git
+
 cd CVision
 
 # Get Flutter packages
