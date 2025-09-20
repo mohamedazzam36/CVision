@@ -100,7 +100,7 @@ Prediction:
 
 ## 🎥 Demo Video
 
-[](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
+[https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
 
 ## ⚡ Quick Start Guide
 
