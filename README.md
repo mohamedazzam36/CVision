@@ -22,9 +22,9 @@ CVision is an AI-powered mobile application built to support students and fresh 
 
 1. Flutter (Dart) → For building cross-platform mobile apps.
 
-2. Firebase → Authentication, Cloud Firestore (for storing user progress), and Cloud Storage (for CV uploads).
+2. Firebase → Authentication.
 
-3. REST API / GraphQL → For connecting to backend services.
+3. REST API → For connecting to backend services.
 
 4. AI/ML Models (NLP + Classification) → For CV parsing, skill extraction, and gap analysis.
 
@@ -32,9 +32,9 @@ CVision is an AI-powered mobile application built to support students and fresh 
 
 6. PostgreSQL / MongoDB → To store skills database, roadmaps, and resources.
 
-7. Provider / Riverpod / Bloc → For state management in Flutter.
+7. Cubit / Bloc → For state management in Flutter.
 
-8. Responsive UI → Adaptive layouts and smooth design across different screen sizes and orientations.
+8. Responsive UI → Smooth and consistent design across various screen sizes and orientations
 
 ## 🧠 About the AI Model
 
@@ -85,7 +85,7 @@ Prediction:
 
 - Database: Firebase / PostgreSQL / MongoDB
 
-- Authentication: Firebase Authentication (Email, Google, Apple, Facebook login)
+- Authentication: Firebase Authentication (Email, Google, Facebook login)
 
 - AI Integration: Pre-trained NLP models + fine-tuned Transformers
 
@@ -100,7 +100,7 @@ Prediction:
 
 ## 🎥 Demo Video
 
-https://drive.google.com/file/d/1xCukPkzIo5bo2VD8VqL_WR9lMjDn2czB/view?usp=sharing
+[https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
 
 ## ⚡ Quick Start Guide
 
@@ -125,3 +125,13 @@ flutter pub get
 
 Run the app:
 flutter run
+
+## 🌐 Try the App
+
+You can try the web version of the application here:  
+👉 [CVision Web App]([https://your-app-link.com](http://cvision-app.netlify.app/))
+
+## 📲 Download the App  
+You can try **CVision** by downloading the latest APK from the link below:  
+
+👉 [Download CVision (Android APK)]([https://drive.google.com/your-apk-link](https://drive.google.com/file/d/1bASkEswEHo8AIJV13swj0AHEwmDLf7c-/view?usp=sharing))
