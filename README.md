@@ -100,7 +100,7 @@ Prediction:
 
 ## 🎥 Demo Video
 
-[https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
+[](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
 
 ## ⚡ Quick Start Guide
 
@@ -129,9 +129,9 @@ flutter run
 ## 🌐 Try the App
 
 You can try the web version of the application here:  
-👉 [CVision Web App]([https://your-app-link.com](http://cvision-app.netlify.app/))
+👉 [CVision Web App]((http://cvision-app.netlify.app/))
 
 ## 📲 Download the App  
 You can try **CVision** by downloading the latest APK from the link below:  
 
-👉 [Download CVision (Android APK)]([https://drive.google.com/your-apk-link](https://drive.google.com/file/d/1bASkEswEHo8AIJV13swj0AHEwmDLf7c-/view?usp=sharing))
+👉 [Download CVision (Android APK)]((https://drive.google.com/file/d/1bASkEswEHo8AIJV13swj0AHEwmDLf7c-/view?usp=sharing))
