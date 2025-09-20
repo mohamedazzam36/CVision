@@ -95,8 +95,7 @@ Prediction:
 
 ## 📸 Screens
 
-<img width="1157" height="605" alt="image" src="https://github.com/user-attachments/assets/bbaa2520-b60f-4885-96c7-72ce4ce3809e" />
-
+![CVision Demo](./assets/images/cvision_demo.JPG)
 
 ## 🎥 Demo Video
 
