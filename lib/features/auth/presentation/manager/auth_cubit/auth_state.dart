@@ -11,8 +11,6 @@ final class OtherMethodsSuccess extends AuthState {}
 
 final class UpdatePasswordSuccess extends AuthState {}
 
-final class UpdatePasswordSuccess extends AuthState {}
-
 final class AuthFailure extends AuthState {
   final String errMessage;
 

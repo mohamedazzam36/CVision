@@ -1,7 +1,7 @@
 import 'package:cvision/core/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:salomon_bottom_bar_extend/salomon_bottom_bar.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 
