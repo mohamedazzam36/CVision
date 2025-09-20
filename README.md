@@ -97,7 +97,6 @@ Prediction:
 
 <img width="1157" height="605" alt="image" src="https://github.com/user-attachments/assets/bbaa2520-b60f-4885-96c7-72ce4ce3809e" />
 
-
 ## 🎥 Demo Video
 
 [https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing](https://drive.google.com/file/d/18pOuxxI1oqSYHEcMC9OyHTKGKyXAYKEu/view?usp=sharing)
